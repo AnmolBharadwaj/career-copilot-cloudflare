@@ -1,0 +1,33 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "career-copilot",
+  "main": "src/server.ts",
+  "compatibility_date": "2026-10-06",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+  "ai": { "binding": "AI" },
+  "vectorize": [
+    {
+      "binding": "VECTORIZE",
+      "index_name": "career-copilot-index"
+    }
+  ],
+  "exports": {
+    "JobAnalysisWorkflow": {
+      "type": "workflow",
+      "name": "job-analysis-workflow",
+      "limits": { "steps": 20 }
+    }
+  },
+  "durable_objects": {
+    "bindings": [
+      { "name": "CareerAgent", "class_name": "CareerAgent" }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["CareerAgent"]
+    }
+  ]
+}
