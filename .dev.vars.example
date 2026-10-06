@@ -1,0 +1,2 @@
+# No Workers AI API key is required.
+# Cloudflare authentication is handled by `npx wrangler login`.
