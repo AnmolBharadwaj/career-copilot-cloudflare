@@ -1,0 +1,35 @@
+{
+  "name": "career-copilot-cloudflare",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AI-powered job application copilot built on Cloudflare Agents, Workers AI, Vectorize and Workflows.",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "deploy": "vite build && wrangler deploy",
+    "types": "wrangler types",
+    "check": "tsc --noEmit",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@ai-sdk/react": "^4.0.0",
+    "@cloudflare/ai-chat": "latest",
+    "agents": "latest",
+    "ai": "^7.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "workers-ai-provider": "latest",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "latest",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "agents": "latest",
+    "typescript": "^6.0.0",
+    "vite": "^8.0.0",
+    "wrangler": "latest"
+  }
+}
